@@ -1,0 +1,97 @@
+.header{
+  height:101px;
+  border-top:2px solid #161f32;
+}
+
+.inner-box{
+  width:1170px;
+  margin:0 auto;
+}
+
+.inner-box:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.logo{
+  line-height:101px;
+  float:left;
+}
+
+.logo-link{
+  width:122px;
+  height:30px;
+  background:url(../images/logo_artica.gif) no-repeat;
+  text-indent:-99999px;
+  display:inline-block;
+  vertical-align:middle;
+  /*display:block; 사용시 가운데 정렬이 되지않아 사용 x*/
+}
+
+.wrap-btn-menu-toggle{
+  display:table-cell;
+  line-height:101px;
+  float:right;
+  vertical-align:middle;
+}
+
+.btn-menu-toggle{
+  width:26px;
+  height:23px;
+  background:url(../images/btn_show_menu.gif) no-repeat;
+  text-indent:-99999px;
+  border:0;
+}
+
+.gnb{
+  width:302px;
+  height:100%;
+  padding-left:38px;
+
+  position:fixed;
+  background:#161f32;
+  top:0;
+  right:0;
+
+  transform:translate(100%, 0);
+}
+
+.gnb-heading{
+  font-family: 'Molle', cursive;
+  font-size:37px;
+  color:#fff;
+  margin-left:4px;
+  margin-top:59px;
+}
+
+.gnb-list{
+  margin-top:50px;
+}
+
+.gnb-item{
+  margin-bottom:19px;
+}
+
+.gnb-link{
+  font-weight:300;
+  font-family: 'Lato', sans-serif;
+  font-size:20px;
+  color:#fff;
+}
+
+.btn-menu-close{
+  width:12px;
+  height:12px;
+  background:url(../images/btn_close_menu.png) no-repeat;
+  border:0;
+  text-indent:-99999px;
+
+  position:absolute;
+  top:59px;
+  right:53px;
+
+  /*mouse cursor 모양 바꾸기*/
+  cursor: pointer;
+
+}
