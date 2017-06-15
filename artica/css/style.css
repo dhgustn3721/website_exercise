@@ -99,6 +99,7 @@
 
 .heading-section{
   font-size:30px;
+  font-weight:400;
 }
 
 .heading-section.logo-type{
@@ -122,6 +123,17 @@
 }
 
 .heading-section-sub.white{
+  color:#fff;
+}
+
+.heading-section-sub2{
+  font-size:25px;
+  margin-bottom:23px;
+  color: #3d506f;
+  font-weight:400;
+}
+
+.heading-section-sub2.white{
   color:#fff;
 }
 
@@ -205,6 +217,7 @@
   box-sizing:border-box;
   display:block;
   line-height:53px;
+  text-align:center;
 }
 
 .btn-link.center{
@@ -228,12 +241,18 @@
   margin-top:35px;
 }
 
-.mt45{
-  margin-top:45px;
+.mt65{
+  margin-top:65px;
 }
 
 .fc-white{
   color:#fff;
+}
+
+.clearfix:after{
+  content:"";
+  display:block;
+  clear:both;
 }
 
 /*영역별 css*/
@@ -432,12 +451,6 @@
   margin-top:10px;
 }
 
-.photo-list-item:nth-child(2) .item-story,
-.photo-list-item:nth-child(3) .item-story,
-.photo-list-item:nth-child(4) .item-story{
-  display:none;
-}
-
 .photo-list-item>.item-story{
   width:100%;
   height:263px;
@@ -445,4 +458,378 @@
   position:absolute;
   left:0;
   bottom:0;
+  text-align:left;
+  padding: 35px 0;
+  box-sizing:border-box;
+  /* 패딩값을 추가하면 박스높이가 늘어나므로 박스의 높이를 줄여야하는데
+   이 때 높이를 직접 수정하지 않고 box-sizing:border-box; 요소를 이용한다.*/
+  color:#fff;
+}
+
+.photo-list-item>.item-story:before{
+  content:"";
+  display:block;
+  width:0;
+  height:0;
+  border-right:14px solid transparent;
+  border-bottom:16px solid #161f32;
+  border-left:14px solid transparent;
+  position:absolute;
+  top:-16px;
+  left:50%;
+}
+
+.photo-list-item:nth-child(1)>.item-story:before{
+  margin-left:-475px;
+}
+
+.photo-list-item:nth-child(2)>.item-story:before{
+  margin-left:-170px;
+}
+
+.photo-list-item:nth-child(3)>.item-story:before{
+  margin-left:135px;
+}
+
+.photo-list-item:nth-child(4)>.item-story:before{
+  margin-left:440px;
+}
+
+.photo-list-item .item-story-heading{
+  font-size:20px;
+  font-weight:700;
+}
+
+.photo-list-item .item-story-paragraph{
+  line-height:1.2;
+  font-size:15px;
+  font-weight:300;
+  margin:35px 0;
+}
+
+.photo-list-item .item-story-period:before{
+  content:"";
+  display:inline-block;
+  width:14px;
+  height:14px;
+  background:url(../images/icon_sprite.png) no-repeat 0 -120px;
+  margin-right:15px;
+  position:relative;
+  top:1px;
+  /* 시계 모양 아이콘이 텍스트와 높이가 맞지않아 position relative top 1px 로
+   아이콘만 내려주었다. 이때 margin-top을 이용할 수도 있지만
+   텍스트까지 영향을 끼칠 수도 있어서 position relative가 가장 효율적이다.*/
+}
+
+.photo-list-item .item-story-birth:before{
+  content:"";
+  display:inline-block;
+  width:13px;
+  height:12px;
+  background:url(../images/icon_sprite.png) no-repeat -14px -121px;
+  margin-right:16px;
+}
+
+.photo-list-item .item-story-birth{
+  margin-top:10px;
+}
+
+/*.item-story>.inner-box{*/
+  /*position:relative;*/
+/*}*/
+
+.photo-list-item .btn-pop-close{
+  position:absolute;
+  top:25px;
+  left:50%;
+  margin-left:573px;
+  /* inner-box 로 중간 가로사이즈 지정해준것의 절반 만큼 margin left 를 이용해 오른쪽으로 밀어준다. */
+  /* 웹 화면 비율을 줄이거나 늘릴때 위의 방법대로 가로기준으로 해주면 자연스럽게 가운대에서 밀려난다. */
+  background:url(../images/btn_close_menu.png) no-repeat;
+  border:0;
+  text-indent:-99999px;
+
+  cursor: pointer;
+}
+
+.our-company{
+  float:left;
+  width:570px;
+  text-align:left;
+}
+
+.our-skills{
+  float:right;
+  width:570px;
+  text-align:left;
+}
+
+.skill-list-item{
+  margin-bottom:8px;
+  background:#ddd;
+}
+
+.skill-list-item:last-child{
+  margin-bottom:0;
+  /* 마지막 박스의 bottom 여백은 있으면 안되므로 개별적으로 설정 */
+}
+
+.skill-list-item>.bar{
+  height:42px;
+  color:#fff;
+  line-height: 42px;
+  background:#3d506f;
+  padding-left:16px;
+  box-sizing:border-box;
+}
+
+.skill-list-item>.bar.p93{
+  width:93%;
+}
+
+.skill-list-item>.bar.p90{
+  width:90%;
+}
+
+.skill-list-item>.bar.p85{
+  width:85%;
+}
+
+.skill-list-item>.bar.p80{
+  width:80%;
+}
+
+.career-wrap{
+  width:100%;
+  background:#222c40;
+  margin-top:68px;
+  padding:63px 0;
+}
+
+.career-list:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.career-list-item{
+  float:left;
+  position:relative;
+  text-align:left;
+  color:#fff;
+  margin-right:160px;
+}
+
+.career-list-item:nth-child(1){
+  padding-left:87px;
+}
+
+.career-list-item:nth-child(2){
+  padding-left:87px;
+}
+
+.career-list-item:nth-child(3){
+  padding-left:68px;
+}
+
+.career-list-item:nth-child(4){
+  padding-left:79px;
+  margin-right:0;
+}
+
+.career-list-item:before{
+  content:"";
+  display:block;
+  background:url(../images/icon_sprite.png) no-repeat;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.career-list-item:nth-child(1):before{
+  width:77px;
+  height:74px;
+  background-position:0 -46px;
+}
+
+.career-list-item:nth-child(2):before{
+  width:77px;
+  height:68px;
+  background-position:-77px -46px;
+}
+
+.career-list-item:nth-child(3):before{
+  width:57px;
+  height:71px;
+  background-position:-155px -46px;
+}
+
+.career-list-item:nth-child(4):before{
+  width:68px;
+  height:56px;
+  background-position:-212px -46px;
+}
+
+.career-number{
+  font-size:40px;
+  margin-bottom:5px;
+}
+
+.btn-filter-wrap{
+  margin-top:67px;
+}
+
+.btn-filter{
+  height:36px;
+  padding:0 21px;
+  background:#3d506f;
+  color:#fff;
+  font-size:20px;
+  border:0;
+
+  margin-right:17px;
+}
+
+.btn-filter.all{
+  background:#00c7fc;
+}
+
+.btn-filter:last-child{
+  margin-right:0;
+}
+
+.blog-list{
+  margin-bottom:120px;
+}
+
+.blog-list:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.blog-list-item{
+  margin-bottom:30px;
+}
+
+.blog-list-item.type1{
+  width:570px;
+  height:300px;
+  float:left;
+  /* 높이를 지정해두어서 clear 할 필요 없음 */
+}
+
+.blog-list-item:first-child{
+  margin-right:30px;
+}
+
+.blog-list-item:last-child{
+  margin-left:30px;
+}
+
+.blog-list-item.type1>.blog-list-item-image{
+  width:285px;
+  height:300px;
+  float:left;
+}
+
+.blog-list-item.type1>.blog-list-item-text{
+  width:285px;
+  height:300px;
+  float:left;
+  padding:25px;
+  box-sizing: border-box;
+}
+
+.blog-list-item.type2{
+  width:770px;
+  float:left;
+}
+
+.blog-list-item.type2>.blog-list-item-text{
+  height:300px;
+  padding:25px;
+  box-sizing: border-box;
+}
+
+.blog-list-item.type3{
+  width:370px;
+  float:right;
+}
+
+.blog-list-item.type3>.blog-list-item-image {
+  width: 370px;
+  height: 300px;
+  /* img 태그가 인라인 요소일 때 생기는 불필요한 여백을 제거하기 위함 */
+  display:block;
+}
+
+.blog-list-item.type3>.blog-list-item-text{
+  height:330px;
+  padding: 25px;
+  box-sizing:border-box;
+}
+
+.blog-list-item.type4{
+  width:370px;
+  height:300px;
+  float:left;
+}
+
+.blog-list-item.type4>.blog-list-item-text{
+  height:300px;
+  padding:25px;
+  box-sizing: border-box;
+}
+
+.blog-list-item-text{
+  background:#161f32;
+  text-align:left;
+}
+
+.blog-list-item-text>.author{
+  color:#fff;
+  margin-bottom:20px;
+}
+
+.blog-list-item-text>.paragraph{
+  line-height:1.2;
+}
+
+.email-wrap{
+  width:770px;
+  height:66px;
+  margin:70px auto;
+
+}
+
+.email-input{
+  width:573px;
+  height:66px;
+  padding:25px;
+  box-sizing:border-box;
+  background:#3d506f;
+  border:0;
+  color:#fff;
+  /* input 태그에 폰트 종류는 직접 지정해줘야 함
+   font family가 상속이 안되므로..*/
+  font-family:Lato, sans-serif;
+  font-size:20px;
+  font-weight:400;
+  display:block;
+  float:left;
+}
+
+.email-send{
+  width:172px;
+  height:66px;
+  background:#3d506f;
+  box-sizing:border-box;
+  border:0;
+  color:#fff;
+  font-family:Lato, sans-serif;
+  font-size:20px;
+  font-weight:400;
+  display:block;
+  float:right;
 }
