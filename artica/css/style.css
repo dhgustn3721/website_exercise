@@ -245,6 +245,14 @@
   margin-top:65px;
 }
 
+.mb65{
+  margin-bottom:65px;
+}
+
+.pb65{
+  padding-bottom:65px;
+}
+
 .fc-white{
   color:#fff;
 }
@@ -253,6 +261,22 @@
   content:"";
   display:block;
   clear:both;
+}
+
+
+/* 태그, id, class 선택자 없이 가상클래스만 사용하는 경우 해당 가상 클래스가
+  적용된 모든 요소에 CSS Property를 적용함 */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
 }
 
 /*영역별 css*/
@@ -285,7 +309,7 @@
 }
 
 .section10{
-  background:#161f32;
+  background:#222c40;
 }
 
 .service-list{
@@ -676,7 +700,7 @@
 }
 
 .btn-filter-wrap{
-  margin-top:67px;
+  margin:67px 0;
 }
 
 .btn-filter{
@@ -739,6 +763,20 @@
   float:left;
   padding:25px;
   box-sizing: border-box;
+  position:relative;
+}
+
+.blog-list-item.type1>.blog-list-item-text:before{
+  content:"";
+  display:block;
+  width:0;
+  height:0;
+  border-top:14px solid transparent;
+  border-right:16px solid #161f32;
+  border-bottom:14px solid transparent;
+  position:absolute;
+  top:57px;
+  left:-16px;
 }
 
 .blog-list-item.type2{
@@ -768,6 +806,20 @@
   height:330px;
   padding: 25px;
   box-sizing:border-box;
+  position:relative;
+}
+
+.blog-list-item.type3>.blog-list-item-text:before{
+  content:"";
+  display:block;
+  width:0;
+  height:0;
+  position:absolute;
+  border-left:14px solid transparent;
+  border-bottom:16px solid #161f32;
+  border-right:14px solid transparent;
+  top:-16px;
+  left:57px;
 }
 
 .blog-list-item.type4{
@@ -832,4 +884,273 @@
   font-weight:400;
   display:block;
   float:right;
+}
+
+.customer-list-item{
+  height:51px;
+  background:url(../images/customer_sprite.png) no-repeat;
+  text-indent:-99999px;
+  float:left;
+  margin-right:98px;
+
+  cursor:pointer;
+}
+
+.customer-list-item:nth-child(1){
+  width:81px;
+  background-position:0 0;
+}
+
+.customer-list-item:nth-child(1):hover {
+  background-position:0 -51px;
+}
+
+.customer-list-item:nth-child(2){
+  width:112px;
+  background-position:-176px 0;
+}
+
+.customer-list-item:nth-child(2):hover {
+  background-position:-176px -51px;
+}
+
+.customer-list-item:nth-child(3){
+  width:122px;
+  background-position:-381px 0;
+}
+
+.customer-list-item:nth-child(3):hover {
+  background-position:-381px -51px;
+}
+
+.customer-list-item:nth-child(4){
+  width:132px;
+  background-position:-567px 0;
+}
+
+.customer-list-item:nth-child(4):hover {
+  background-position:-567px -51px;
+}
+
+.customer-list-item:nth-child(5){
+  width:117px;
+  background-position:-770px 0;
+}
+
+.customer-list-item:nth-child(5):hover {
+  background-position:-770px -51px;
+}
+
+.customer-list-item:nth-child(6){
+  width:112px;
+  background-position:-974px 0;
+  margin-right:0;
+}
+
+.customer-list-item:nth-child(6):hover {
+  background-position:-974px -51px;
+}
+
+.contact-list{
+  position:relative;
+  height:165px;
+  margin:55px 0;
+}
+
+.contact-list-item{
+  position:absolute;
+  width:230px;
+  left:50%;
+}
+
+.contact-list-item:before{
+  content:"";
+  display:block;
+
+  width:71px;
+  height:71px;
+  background:url(../images/icon_sprite.png) no-repeat;
+
+  margin:0 auto 30px;
+}
+
+.contact-list-item:nth-child(1){
+  margin-left:-515px;
+}
+
+.contact-list-item:nth-child(1):before{
+  background-position:0 -135px;
+}
+
+.contact-list-item:nth-child(2){
+  margin-left:-115px;
+}
+
+.contact-list-item:nth-child(2):before{
+  width:72px;
+  background-position:-71px -135px;
+}
+
+.contact-list-item:nth-child(3){
+  margin-left:285px;
+}
+
+.contact-list-item:nth-child(3):before{
+  background-position:-142px -135px;
+}
+
+.contact-list-item>.contact-text{
+  font-size:20px;
+  color:#fff;
+  /*단락 줄바꿈 않함*/
+  white-space:nowrap;
+}
+
+.form-wrap .name,
+.form-wrap .mail,
+.form-wrap .subject{
+  width:370px;
+  height:66px;
+  background:#161f32;
+  border:1px solid #fff;
+  box-sizing:border-box;
+  padding-left:20px;
+  /* 인라인 요소여서 기본마진이 생기는데 이런 경우
+   기본마진을 고려해서 마진을 적용해서 구현할 수도 있지만
+   여러 브라우저에서 같게 출력이 되지 않을 수도 있다 크로스 브라우징*/
+}
+
+.form-wrap .name,
+.form-wrap .mail{
+  margin-right:27px;
+}
+
+.form-wrap .message{
+  width:1170px;
+  height:215px;
+  background:#161f32;
+  border:1px solid #fff;
+  box-sizing:border-box;
+  padding:20px;
+  margin-top:30px;
+  font-family: 'Lato', sans-serif;
+}
+
+.form-wrap input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-style:italic;
+}
+.form-wrap input::-moz-placeholder {
+  font-style:italic;
+}
+.form-wrap input:-ms-input-placeholder {
+  font-style:italic;
+}
+.form-wrap input:-moz-placeholder {
+  font-style:italic;
+}
+
+.form-wrap textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-style:italic;
+}
+.form-wrap textarea::-moz-placeholder {
+  font-style:italic;
+}
+.form-wrap textarea:-ms-input-placeholder {
+  font-style:italic;
+}
+.form-wrap textarea:-moz-placeholder {
+  font-style:italic;
+}
+
+.btn-send-msg{
+  width:235px;
+  height:66px;
+  background:#fff;
+  border:0;
+  color:#3d506f;
+  margin-top:30px;
+  font-size:20px;
+}
+
+.footer{
+  border-top:1px solid #fff;
+  background:#161f32;
+  text-align:center;
+  padding:40px 0;
+}
+
+.footer>.footer-logo{
+  font-family:'Molle', cursive;
+  font-size:37px;
+  color:#fff;
+}
+
+.footer .footer-copyright{
+  font-size:11px;
+  color:#fff;
+}
+
+.detail{
+  display:none;
+}
+
+.pofol-list{
+  margin-bottom:120px;
+}
+
+.pofol-list-item{
+  float:left;
+  margin:0 30px 30px 0;
+}
+
+/*2n 은 짝수 / 2n+1 은 홀수  -----  ex) nth-child(2n) nth-child(2n+1)*/
+/* 4n 은 4의 배수 -> 4번째 박스 마다 margin-right 를 없애야 레이아웃이 유지됨 */
+.pofol-list-item:nth-child(4n){
+  margin-right:0;
+}
+
+.thumb{
+  width:270px;
+  height:200px;
+  position:relative;
+  cursor:pointer;
+}
+
+.thumb-image-wrap{
+  width:270px;
+  height:200px;
+  overflow:hidden;
+}
+/* w는 이미지 비율보다 박스 비율이 클 때 가로길이를 맞춤 width 100% */
+.thumb-image.w{
+  width:100%;
+  height:auto;
+}
+/* h는 이미지 비율보다 박스 비율이 작을 때 세로길이를 맞춤 height 100% */
+.thumb-image.h{
+  width:auto;
+  height:100%;
+}
+
+.thumb-text-wrap{
+  width:270px;
+  height:200px;
+  background:#000;
+  opacity:0.7;
+  position:absolute;
+  top:0;
+  left:0;
+  color:#fff;
+  padding-top:75px;
+  box-sizing:border-box;
+}
+
+.thumb-text-heading{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.thumb-text-category{
+  font-weight:300;
 }
