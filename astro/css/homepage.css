@@ -1,0 +1,116 @@
+.section2{
+  width:100%;
+}
+
+.st2-title{
+  font-size:20px;
+  color:#2c4755;
+  margin-bottom:25px;
+}
+
+.st2-paragraph{
+  font-size:14px;
+  color:#637988;
+}
+
+.st2-icon-title{
+  font-size:17px;
+  color:#2c4755;
+  font-weight:700;
+}
+
+.st2-icon-paragraph{
+  font-size:14px;
+  color:#637988;
+}
+
+
+.footer{
+  width:100%;
+  background:#c4a2e2 ;
+  position:relative;
+}
+
+.inner-box{
+  width:940px;
+  margin:0 auto;
+}
+
+.inner-box:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.col{
+  width:220px;
+  font-family:'Roboto', sans-serif;
+  float:left;
+  padding: 28px 20px 0 0;
+}
+
+.col-top{
+  margin-bottom:29px;
+}
+
+.col-bottom{
+  padding-bottom:133px;
+}
+
+.col:nth-child(3){
+  padding-right:0;
+}
+
+.list-heading{
+  font-size:17px;
+  color:#fff;
+  margin-bottom:17px;
+}
+
+.list-heading-sub{
+  font-size:14px;
+  color:#fff;
+  margin-bottom:12px;
+}
+
+.list{
+  list-style-type:disc;
+  font-size:11px;
+  color:#fff;
+  line-height:2.3;
+  margin-left:21px;
+}
+
+.footer-paragraph{
+  font-size:11px;
+  color:#fff;
+  line-height:1.2;
+}
+
+.footer-link{
+  float:right;
+  font-size:11px;
+  color:#fff;
+}
+
+.p-margin{
+  margin-bottom:21px;
+}
+
+.clout{
+  text-indent:-99999px;
+}
+
+.cloud:before{
+  content:"";
+  display:block;
+
+  width: 1600px;
+  height: 129px;
+
+  bottom:0;
+  left:15%;
+  background:url(../images/Mid%20Cloud%20copy.png) no-repeat;
+  position:absolute;
+
+}
